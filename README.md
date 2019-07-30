@@ -23,6 +23,16 @@ Simple extension to read barcodes from images
 The EAN13 image in the tests/ directory is from 
 http://en.wikipedia.org/wiki/File:Ean-13-5901234123457.png
 
+## Since 
+For some reason C-API of zbar (/usr/include/zbar.h) now requires PATCH argument in the `zbar_version` function and needs to be accomodated:
+
+```c
+extern int zbar_version(unsigned *major,
+                        unsigned *minor,
+                        unsigned *patch);
+```
+
+
 ## Dependencies:
 
 ZBar 
